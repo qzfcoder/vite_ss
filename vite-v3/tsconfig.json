@@ -2,17 +2,27 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "strict": true,
+    "strict": false,
     "jsx": "preserve", // 保留 JSX 语法，让 Vite 插件处理
-    "moduleResolution": "Node",
+    "moduleResolution": "Node", // 1
     "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["ESNext", "DOM"],
+    "types": ["vitejs/client"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "isolatedModules": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.jsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.vue"
+  ],
   "exclude": ["node_modules"]
 }

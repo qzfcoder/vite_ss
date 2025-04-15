@@ -1,0 +1,9 @@
+:root {
+  --root-bg-color: blue;
+}
+
+.root {
+  /* @console.error hello root */
+  color: var(--root-bg-color);
+  /* color: red; */
+}
